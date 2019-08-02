@@ -42,6 +42,16 @@ don't forget to specify the import path.
 
              }
 
+         },
+         
+         methods: {
+         
+            reset() {
+         
+                this.$emit('reset');
+         
+            }
+         
          }
 
     }
