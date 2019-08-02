@@ -24,7 +24,13 @@ Vue.component('repeater-input', {
     },
     RemoveField(key) {
       this.fields.splice(key, 1);
+    },
+    resetField() {
+      this.fields = [{}];
     }
+  },
+  created() {
+    fire.$on('reset', this.resetField); 
   }
 });
 </script>
