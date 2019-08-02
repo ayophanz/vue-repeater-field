@@ -30,7 +30,7 @@ Vue.component('repeater-input', {
     }
   },
   created() {
-    fire.$on('reset', this.resetField); 
+    this.$on('reset', this.resetField); 
   }
 });
 </script>
