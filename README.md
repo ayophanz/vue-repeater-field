@@ -9,7 +9,14 @@ add this code to your app.js
 
       
     window.fire = new Vue();
+    
+   This line of code updates child when querying axios response
    
+    self.$refs.childUpdate.fields = data here;
+    
+   This is requirements on updating child
+   
+    ref="childUpdate"
 
 
 # Usage
@@ -20,7 +27,7 @@ add this code to your app.js
     
       <label for="feature">Features </label>
 
-      <repeater-input :dataValue="featureData" @dataFeature="featureData = $event"></repeater-input>
+      <repeater-input :dataValue="featureData" ref="childUpdate" @dataFeature="featureData = $event"></repeater-input>
 
       <pre>{{ featureData }}</pre>
   
@@ -57,6 +64,15 @@ add this code to your app.js
          
                 fire.$emit('reset');
          
+            },
+            
+            updateChildData() {
+               let self = this;
+               axios.get('/api/edit-room/'+id)
+               .then(
+               function (response) {
+                  self.$refs.childUpdate.fields = JSON.parse(response.data.room_feature.value);
+               });
             }
          
          }
