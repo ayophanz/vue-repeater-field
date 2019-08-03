@@ -6,11 +6,11 @@ download or clone this file into your components folder or any folder.
 don't forget to specify the import path.
 
 add this code to your app.js
-<code>
+
       
     window.fire = new Vue();
+   
 
-</code>
 
 # Usage
 <code>
