@@ -13,7 +13,7 @@ add this code to your app.js
 
 
 # Usage
-<code>
+
     <template>
   
     <div class="form-group">
@@ -64,7 +64,6 @@ add this code to your app.js
     }
 
     </script>
-</code>
 
 
 
