@@ -14,7 +14,7 @@ Vue.component('repeater-input', {
   props: ['dataValue'],          
   data() {
     return {
-        fields: Vue.util.extend([{}], this.dataValue)
+        fields: [{}]
     }
   },
   methods: {
@@ -29,7 +29,8 @@ Vue.component('repeater-input', {
       this.fields = [{}];
     }
   },
-  created() {
+  mounted() {
+    this.fields = Vue.util.extend([{}], this.dataValue);
     fire.$on('reset', this.resetField); 
   }
 });
