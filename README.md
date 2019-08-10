@@ -1,5 +1,8 @@
 # vue-repeater-field
 
+# Image
+<img src="repeater-img.JPG">
+
 # Installation
 download or clone this file into your components folder or any folder.
 
