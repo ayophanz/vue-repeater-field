@@ -41,13 +41,13 @@ add this code to your app.js
 
     <script>
   
-    import RepeaterInputComponent from '../../components/repeaterField';
+    import RepeaterInput from '../../components/repeaterField';
 
     export default {
 
         components: {
 
-         'repeater-field': RepeaterInputComponent
+         RepeaterInputComponent
 
         },
 
