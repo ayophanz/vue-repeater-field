@@ -47,7 +47,7 @@ add this code to your app.js
 
         components: {
 
-         RepeaterInputComponent
+         RepeaterInput
 
         },
 
